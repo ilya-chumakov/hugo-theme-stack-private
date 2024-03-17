@@ -45,6 +45,16 @@
                 </time>
             </div>
         {{ end }}
+
+        {{ if .Params.tags }}
+        <div class="article-tags">
+            {{ range (.GetTerms "tags") }}
+                <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
+                    {{ .LinkTitle }}
+                </a>
+            {{ end }}
+        </div>
+        {{ end }}
     </footer>
     {{ end }}
 
