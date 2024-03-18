@@ -23,6 +23,7 @@
         {{ end }}
     </div>
 
+    {{.Summary}}
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
     {{ $showDate := not .Date.IsZero }}
     {{ $showFooter := or $showDate $showReadingTime }}
