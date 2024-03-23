@@ -10,6 +10,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     @include respond(xl) {
         --main-top-padding: 25px;  //orig: 50
     }
+    --section-separation: 25px; //orig: 40
 
     --body-background: #f5f5fa;
     --body-background-darker: #dbecfe; //my
@@ -20,8 +21,6 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --body-text-color: #707070;
 
     --tag-border-radius: 4px;
-
-    --section-separation: 30px; //orig: 40
 
     --scrollbar-thumb: hsl(0, 0%, 85%);
     --scrollbar-track: var(--body-background);
