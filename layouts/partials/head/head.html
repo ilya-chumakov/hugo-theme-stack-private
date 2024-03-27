@@ -12,6 +12,7 @@
 
 {{- partial "head/style.html" . -}}
 {{- partial "head/script.html" . -}}
+{{ template "_internal/schema.html" . }}  <!-- добавил сам -->
 {{- partial "head/opengraph/include.html" . -}}
 
 {{- range .AlternativeOutputFormats -}}
