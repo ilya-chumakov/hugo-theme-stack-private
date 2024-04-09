@@ -15,9 +15,20 @@
 {{ template "_internal/schema.html" . }}  <!-- добавил сам -->
 {{- partial "head/opengraph/include.html" . -}}
 
+<!-- 
 {{- range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ site.Title }}">
-{{- end -}}
+{{- end -}} -->
+
+<!-- хотел добавить ссылку на общий RSS фид на все страницы (по умолчанию добавляется только в корень)
+    сделал по комменту https://discourse.gohugo.io/t/link-to-rss-feed-on-all-pages-using-outputformats/11598/7
+-->
+
+{{- with .Site.GetPage "/" }}
+    {{- range .AlternativeOutputFormats }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{- end }}
+{{- end }}
 
 {{ with .Site.Params.favicon }}
     <link rel="shortcut icon" href="{{ . | relURL }}" />
