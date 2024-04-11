@@ -221,9 +221,18 @@
     gap: 10px;
 
     svg {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
         stroke: var(--body-text-color);
         stroke-width: 1.33;
+
+        &:hover {
+            // stroke-width: 2.66;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            transform: rotate(6deg);
+            // stroke: var(--accent-color);
+            //background-color: var(--body-background-darker);
+        }
     }
 }
