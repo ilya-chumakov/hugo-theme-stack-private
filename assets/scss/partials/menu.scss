@@ -227,12 +227,14 @@
         stroke-width: 1.33;
 
         &:hover {
-            // stroke-width: 2.66;
+            stroke-width: 1.66;
             transition-duration: 0.3s;
             transition-timing-function: ease;
-            transform: rotate(6deg);
-            // stroke: var(--accent-color);
-            //background-color: var(--body-background-darker);
+            transform: scale(125%);
+            
+            // transform: rotate(6deg);
+            // stroke: black;
+            // background-color: var(--body-background-darker);
         }
     }
 }
