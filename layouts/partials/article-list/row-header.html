@@ -1,4 +1,7 @@
 <header class="article-row-header">
+    <!-- изменил ссылку на партиал и порядок, для мобильной версии порядок через свойство CSS order -->
+    {{ partialCached "article-list/row-details" . .RelPermalink }}
+
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{ if $image.exists }}
         <div class="article-image">
@@ -30,6 +33,4 @@
             </a>
         </div>
     {{ end }}
-<!-- изменил только ссылку на партиал -->
-    {{ partialCached "article-list/row-details" . .RelPermalink }}
 </header>
