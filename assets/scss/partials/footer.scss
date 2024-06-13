@@ -1,16 +1,17 @@
 footer.site-footer {
-    padding: 20px 0 var(--section-separation) 0;
+    // padding: 20px 0 var(--section-separation) 0;
+    padding: 0px 0 var(--section-separation) 0;
     font-size: 1.4rem;
     line-height: 1.75;
 
-    &:before {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 50px;
-        background: var(--body-text-color);
-        margin-bottom: 20px;
-    }
+    // &:before {
+    //     content: "";
+    //     display: block;
+    //     height: 3px;
+    //     width: 50px;
+    //     background: var(--body-text-color);
+    //     margin-bottom: 20px;
+    // }
 
     .copyright {
         color: var(--accent-color);
