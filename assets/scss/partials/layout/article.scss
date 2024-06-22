@@ -330,6 +330,8 @@
         padding: var(--card-padding);
         position: relative;
 
+        overflow-x: auto; //added manually
+
         &:hover {
             .copyCodeButton {
                 opacity: 1;
