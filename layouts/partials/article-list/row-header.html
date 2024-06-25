@@ -14,9 +14,9 @@
                     {{- $Srcset := "" -}}
                     
                     {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
-                        {{- $thumbnail := $image.resource.Resize "250x" -}}
-                        {{- $thumbnailRetina := $image.resource.Resize "500x" -}}
-                        {{- $Srcset = printf "%s 250w, %s 500w" $thumbnail.RelPermalink $thumbnailRetina.RelPermalink -}}
+                        {{- $thumbnail := $image.resource.Resize "350x" -}}
+                        {{- $thumbnailRetina := $image.resource.Resize "700x" -}}
+                        {{- $Srcset = printf "%s 350w, %s 700w" $thumbnail.RelPermalink $thumbnailRetina.RelPermalink -}}
                         {{- $Permalink = $thumbnail.RelPermalink -}}
                         {{- $Width = $thumbnail.Width -}}
                         {{- $Height = $thumbnail.Height -}}
