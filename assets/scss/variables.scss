@@ -68,9 +68,9 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --card-padding: 25px;
     }
 
-    @include respond(xl) {
-        --card-padding: 30px;
-    }
+    // @include respond(xl) {
+    //     --card-padding: 30px;
+    // }
 
     --small-card-padding: 25px 20px;
 
