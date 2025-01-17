@@ -124,7 +124,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --code-text-color:rgb(39, 40, 34);
 
     --table-border-color: #dadada;
-    --tr-even-background-color: #efefee;
+    --tr-even-background-color: var(--card-background);
 
     --kbd-border-color: #dadada;
 
