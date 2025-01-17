@@ -8,22 +8,27 @@
         {{ end }}
     </header>
     {{ end }}
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="{{ .RelPermalink }}">
-                {{- .Title -}}
-            </a>
-        </h2>
     
-        {{ with .Params.description }}
-        <h3 class="article-subtitle">
-            {{ . }}
-        </h3>
-        {{ end }}
-    </div>
+    <a href="{{ .RelPermalink }}" style="color: inherit">
+        <div class="article-title-wrapper">
+            <h2 class="article-title">
+                {{- .Title -}}
+            </h2>
+        
+            {{ with .Params.description }}
+            <h3 class="article-subtitle">
+                {{ . }}
+            </h3>
+            {{ end }}
+        </div>
 
-    {{.Summary}}
+        <!-- чтобы поставить эти 3 точки, пришлось перейти на отдельный front matter summary, иначе добрый Hugo 
+             заворачивает summary в тэг <p>, и это только костылями обрезать типа
+             {{$summaryUnwrap := replace .Summary "<p>" "" }} 
+             и еще проблемы с MD->HTML   -->
+        {{.Summary}}...
+    </a>
+
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
     {{ $showDate := not .Date.IsZero }}
     {{ $showFooter := or $showDate $showReadingTime }}
